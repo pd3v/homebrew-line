@@ -1,7 +1,7 @@
 class Line < Formula
   desc "tiny command-line midi sequencer and language for live coding. ableton link compatible."
   homepage "https://github.com/pd3v/line"
-  head "https://github.com/pd3v/line.git"
+  head "https://github.com/pd3v/line.git", :using => :git, :branch => :ableton_link_integration
   #url "https://github.com/pd3v/line/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "cd2e09f2fd0aa43fbfef5d1c0ca9300765c21703e7e366e566c9f35c18144878"
   license "MIT"
