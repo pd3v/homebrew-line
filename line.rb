@@ -5,7 +5,10 @@ class Line < Formula
 
   #, :using => "git"
   #url "https://github.com/pd3v/line/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "cd2e09f2fd0aa43fbfef5d1c0ca9300765c21703e7e366e566c9f35c18144878"
+  #sha256 "cd2e09f2fd0aa43fbfef5d1c0ca9300765c21703e7e366e566c9f35c18144878"
+
+
+  sha256 "93b9f490423e4d4ef7bd27e3f3d7dc75ec777ee6078b4d3ababc9c71ae469cb8"
   license "MIT"
   #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
   #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "a94e7828f93b9fbf109d3f2d1028ddc097dd20cf"
@@ -23,7 +26,7 @@ class Line < Formula
     #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     #system "make", "-C", "build/"
     #bin.install "build/line"
-    system "./", "build.sh"
+    system "./build.sh"
     ohai("Make some noise!")
   end
 end
