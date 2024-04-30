@@ -10,8 +10,8 @@ class Line < Formula
 
   depends_on "cmake"    =>  :build
   depends_on "readline" =>  :recommended
-  depends_on "rtmidi"   =>  :build
-  depends_on "link"     =>  :build
+  #depends_on "rtmidi"   =>  :build
+  #depends_on "link"     =>  :build
 
   #def install
   #  system "mkdir", "build"
