@@ -7,7 +7,7 @@ class Line < Formula
   url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
 
   depends_on "cmake" => :build
-  #depends_on "readline" => :recommended
+  depends_on "readline" => :recommended
 
   def install
     system "mkdir", "build"
