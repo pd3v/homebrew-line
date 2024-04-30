@@ -10,15 +10,15 @@ class Line < Formula
 
   depends_on "cmake"    =>  :build
   depends_on "readline" =>  :recommended
-  #depends_on "rtmidi"   =>  :build
-  #depends_on "link"     =>  :build
+  depends_on "rtmidi"   =>  :build
+  depends_on "link"     =>  :build
 
-  #def install
-  #  system "mkdir", "build"
-  #  system "mkdir", "bin"
-  #  system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-  #  system "make", "-C", "build/"
-  #  bin.install "build/line"
-  #  ohai("Make some noise!")
-  #end
+  def install
+    system "mkdir", "build"
+    system "mkdir", "bin"
+    system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
+    system "make", "-C", "build/"
+    bin.install "build/line"
+    ohai("Make some noise!")
+  end
 end
