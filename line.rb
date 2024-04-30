@@ -19,7 +19,7 @@ class Line < Formula
 
   def install
     system "mkdir", "build"
-    #system "mkdir", "bin"
+    system "mkdir", "bin"
     system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     system "make", "-C", "build/"
     bin.install "build/line"
