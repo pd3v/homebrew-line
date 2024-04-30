@@ -6,9 +6,12 @@ class Line < Formula
   license "MIT"
   #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
   url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "a94e7828f93b9fbf109d3f2d1028ddc097dd20cf"
+  url "https://github.com/Ableton/link.git", tag: "3.1.0", revision: "c4edbb2c74cdf44c12bb5495f949ab304944422a"
 
   depends_on "cmake" => :build
   depends_on "readline" => :recommended
+  depends_on "rtmidi" => :build
+  depends_on "link" = :build
 
   #def install
   #  system "mkdir", "build"
