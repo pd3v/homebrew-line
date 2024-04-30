@@ -4,7 +4,8 @@ class Line < Formula
   url "https://github.com/pd3v/line/archive/refs/tags/v0.6.1.tar.gz"
   sha256 "cd2e09f2fd0aa43fbfef5d1c0ca9300765c21703e7e366e566c9f35c18144878"
   license "MIT"
-  url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
+  #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
+  url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "a94e7828f93b9fbf109d3f2d1028ddc097dd20cf"
 
   depends_on "cmake" => :build
   depends_on "readline" => :recommended
