@@ -6,7 +6,7 @@ class LineAT062 < Formula
   sha256 "3a380903d4abb79dd889c3e3d5d380563c01f1b1530ef6258c65223d6d34364c"
   license "MIT"
 
-  depends_on "cmake" => :build
+  depends_on "cmake" => :recommend
   depends_on "readline" => :recommended
 
   def install
@@ -15,7 +15,7 @@ class LineAT062 < Formula
     system "mkdir", "build"
     system "mkdir", "bin"
     system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-    #system "make", "-C", "build/"
+    system "make", "-C", "build/"
     bin.install "line"
     #system "./build.sh"  
     ohai("Make some noise!")
