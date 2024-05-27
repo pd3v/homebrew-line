@@ -16,7 +16,7 @@ class LineAT062 < Formula
     system "mkdir", "bin"
     system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     system "make", "-C", "build/"
-    bin.install "line"
+    bin.install "build/line"
     #system "./build.sh"  
     ohai("Make some noise!")
   end
