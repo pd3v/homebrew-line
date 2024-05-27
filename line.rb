@@ -1,32 +1,23 @@
-class Line < Formula
-  desc "tiny command-line midi sequencer and language for live coding. ableton link compatible."
+class LineAT062 < Formula
+  desc "tiny command-line midi sequencer and language for live coding music. < ableton link compatible >"
   homepage "https://github.com/pd3v/line"
+  #url "https://github.com/pd3v/line/archive/refs/tags/v0.6.2.tar.gz"
   head "https://github.com/pd3v/line", :branch => "ableton_link_integration"
-
-  #, :using => "git"
-  #url "https://github.com/pd3v/line/archive/refs/tags/v0.6.1.tar.gz"
-  #sha256 "cd2e09f2fd0aa43fbfef5d1c0ca9300765c21703e7e366e566c9f35c18144878"
-
-
-  sha256 "93b9f490423e4d4ef7bd27e3f3d7dc75ec777ee6078b4d3ababc9c71ae469cb8"
+  sha256 "3a380903d4abb79dd889c3e3d5d380563c01f1b1530ef6258c65223d6d34364c"
   license "MIT"
-  #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "b45dae2d3a9e3aae819ade3e5a53504d601e05dd"
-  #url "https://github.com/thestk/rtmidi.git", tag: "2.1.1", revision: "a94e7828f93b9fbf109d3f2d1028ddc097dd20cf"
-  #url "https://github.com/Ableton/link.git", tag: "Link-3.1.0", revision: "e55789a3f665de4416dc4809e4a8934266110ffd"
 
-  depends_on "cmake"  =>  :build
-  depends_on "readline" =>  :recommended
-  #depends_on "readline" =>  :optional
-  #depends_on "rtmidi" =>  :build
-  #depends_on "link" =>  :build
+  depends_on "cmake" => :build
+  depends_on "readline" => :recommended
 
   def install
-    #system "mkdir", "build"
-    #system "mkdir", "bin"
-    #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-    #system "make", "-C", "build/"
-    #bin.install "build/line"
-    system "./build.sh"
+    #system "./configure", "--disable-silent-rules", *std_configure_args
+    # system "cmake", "-S", ".", "-B", "build", *std_cmake_args
+    system "mkdir", "build"
+    system "mkdir", "bin"
+    system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
+    system "make", "-C", "build/"
+    bin.install "line"
+    #system "./build.sh"  
     ohai("Make some noise!")
   end
 end
