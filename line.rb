@@ -20,12 +20,12 @@ class Line < Formula
     on_macos do
       lib.install "build/externals/lpeg/liblpeg.dylib"
       lib.install "build/externals/lua/liblua.dylib"
-      lib.install "build/externals/lua/librtmidi.dylib"
+      lib.install "build/externals/rtmidi/librtmidi.dylib"
     end
     on_linux do
       lib.install "build/externals/lpeg/liblpeg.so"
       lib.install "build/externals/lua/liblua.so"
-      lib.install "build/externals/lua/librtmidi.so"
+      lib.install "build/externals/rtmidi/librtmidi.so"
     end
     bin.install "line"
   
