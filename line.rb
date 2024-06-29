@@ -1,7 +1,7 @@
 class LineAT062 < Formula
   desc "Tiny command-line midi sequencer and language for live coding music. ableton link compatible"
   homepage "https://github.com/pd3v/line"
-  url "https://github.com/pd3v/line",
+  url "https://github.com/pd3v/line.git",
   tag: "v0.6.2"
  
   sha256 "3a380903d4abb79dd889c3e3d5d380563c01f1b1530ef6258c65223d6d34364c"
