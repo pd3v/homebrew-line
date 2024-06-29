@@ -1,4 +1,4 @@
-class LineAT062 < Formula
+class Line < Formula
   desc "Tiny command-line midi sequencer and language for live coding music. ableton link compatible"
   homepage "https://github.com/pd3v/line"
   url "https://github.com/pd3v/line.git",
