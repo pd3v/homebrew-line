@@ -7,6 +7,7 @@ class Line < Formula
   sha256 "3a380903d4abb79dd889c3e3d5d380563c01f1b1530ef6258c65223d6d34364c"
   license "MIT"
 
+  depends_on "rtmidi" => :recommended
   depends_on "readline" => :recommended
   depends_on "cmake" => :build
   
