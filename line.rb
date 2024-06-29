@@ -27,7 +27,7 @@ class Line < Formula
       lib.install "build/externals/lua/liblua.so"
       lib.install "build/externals/rtmidi/librtmidi.so"
     end
-    bin.install "line"
+    bin.install "build/line"
   
     ohai("Make some noise!")
   end
