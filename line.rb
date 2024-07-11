@@ -9,7 +9,7 @@ class Line < Formula
 
   # depends_on "rtmidi" => :recommended
   on_linux do
-    depends_on "alsa" => :recommended
+    depends_on "alsa-lib" => :recommended
   end  
   depends_on "readline" => :recommended
   depends_on "cmake" => :build
@@ -19,7 +19,7 @@ class Line < Formula
     system "mkdir", "build"
     system "mkdir", "bin"
     on_mac do
-    system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
+      system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     end
     on_linux do
       system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args, "-DCMAKE_BUILD_TYPE=Release", "-DRTMIDI_API_ALSA=ON"
