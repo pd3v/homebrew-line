@@ -30,11 +30,13 @@ class Line < Formula
       lib.install "build/externals/lpeg/liblpeg.dylib"
       lib.install "build/externals/lua/liblua.dylib"
       lib.install "build/externals/rtmidi/librtmidi.dylib"
+      lib.install "build/externals/rtmidi/librtmidi.7.dylib"
     end
     on_linux do
       lib.install "build/externals/lpeg/liblpeg.so"
       lib.install "build/externals/lua/liblua.so"
       lib.install "build/externals/rtmidi/librtmidi.so"
+      lib.install "build/externals/rtmidi/librtmidi.so.7"
     end
     bin.install "build/line"
   
