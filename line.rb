@@ -22,7 +22,7 @@ class Line < Formula
       system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     end
     on_linux do
-      system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args, "-DCMAKE_BUILD_TYPE=Release", "-DRTMIDI_API_ALSA=ON"
+      system "cmake", "-DCMAKE_BUILD_TYPE=Release", "-DRTMIDI_API_ALSA=ON", "-S", ".", "-B", "build/" , *std_cmake_args 
     end  
     system "make", "-C", "build/"
 
