@@ -18,7 +18,7 @@ class Line < Formula
     #system "./configure", "--disable-silent-rules", *std_configure_args
     system "mkdir", "build"
     system "mkdir", "bin"
-    on_mac do
+    on_macos do
       system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
     end
     on_linux do
