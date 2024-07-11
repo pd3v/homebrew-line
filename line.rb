@@ -16,17 +16,15 @@ class Line < Formula
   
   def install
     #system "./configure", "--disable-silent-rules", *std_configure_args
-    #system "mkdir", "build"
-    #system "mkdir", "bin"
+    system "mkdir", "build"
+    system "mkdir", "bin"
     on_macos do
-      #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-      system_command "./build.sh"
+      system "cmake", "-S", ".", "-B", "build/", "-DCMAKE_BUILD_TYPE=Release", "-DRTMIDI_API_JACK=OFF", "-DRTMIDI_BUILD_TESTING=OFF", *std_cmake_args
     end
     on_linux do
-       #system "cmake", "-DCMAKE_BUILD_TYPE=Release", "-D__LINUX_ALSA__=ON", "-S", ".", "-B", "build/" , *std_cmake_args 
-       system_command "./build_linux.sh"
+       system "cmake", "-S", ".", "-B", "build/", "-DCMAKE_BUILD_TYPE=Release", "-D__LINUX_ALSA__=ON", "-DRTMIDI_BUILD_TESTING=OFF", *std_cmake_args 
     end 
-    #system "make", "-C", "build/"
+    system "make", "-C", "build/"
 
     on_macos do
       lib.install "build/externals/lpeg/liblpeg.dylib"
