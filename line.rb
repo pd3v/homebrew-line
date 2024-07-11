@@ -8,9 +8,9 @@ class Line < Formula
   license "MIT"
 
   # depends_on "rtmidi" => :recommended
-  on_linux do
-    depends_on "alsa-lib" => :recommended
-  end  
+  #on_linux do
+  #  depends_on "alsa-lib" => :recommended
+  #end  
   depends_on "readline" => :recommended
   depends_on "cmake" => :build
   
