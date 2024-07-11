@@ -20,11 +20,11 @@ class Line < Formula
     #system "mkdir", "bin"
     on_macos do
       #system "cmake", "-S", ".", "-B", "build/" , *std_cmake_args
-      system "./build.sh"
+      system_command "./build.sh"
     end
     on_linux do
        #system "cmake", "-DCMAKE_BUILD_TYPE=Release", "-D__LINUX_ALSA__=ON", "-S", ".", "-B", "build/" , *std_cmake_args 
-       system "./build_linux.sh"
+       system_command "./build_linux.sh"
     end 
     #system "make", "-C", "build/"
 
