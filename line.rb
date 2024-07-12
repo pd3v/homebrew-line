@@ -42,7 +42,7 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.so"
     end
     bin.install "build/line"
-    .install "./lineparser.lua"
+    install "./lineparser.lua"
 
     ohai("Make some noise!")
   end
