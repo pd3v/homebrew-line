@@ -25,9 +25,9 @@ class Line < Formula
        system "cmake", "-S", ".", "-B", "build/", "-DCMAKE_BUILD_TYPE=Release", "-D__LINUX_ALSA__=ON", "-DRTMIDI_BUILD_TESTING=OFF", *std_cmake_args 
     end 
     system "make", "-C", "build/"
-    #system "cp", "lineparser.lua", "/build"
 
     on_macos do
+      bin.install "build/lineparser.lua"
       lib.install "build/externals/lpeg/liblpeg.dylib"
       lib.install "build/externals/lua/liblua.dylib"
       lib.install "build/externals/rtmidi/librtmidi.7.0.0.dylib"
@@ -35,6 +35,7 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.dylib"
     end
     on_linux do
+      bin.install "build/lineparser.lua"
       lib.install "build/externals/lpeg/liblpeg.so"
       lib.install "build/externals/lua/liblua.so"
       lib.install "build/externals/rtmidi/librtmidi.so.7.0.0"
@@ -42,8 +43,7 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.so"
     end
     bin.install "build/line"
-    bin.install "build/lineparser.lua"
-
+    
     ohai("Make some noise!")
   end
 end
