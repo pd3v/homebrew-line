@@ -26,7 +26,7 @@ class Line < Formula
     end 
     system "make", "-C", "build/"
 
-    bin.install "build/externals/parser/lineparser.lua"
+    lib.install "build/externals/parser/lineparser.lua"
     on_macos do
       lib.install "build/externals/lpeg/liblpeg.dylib"
       lib.install "build/externals/lua/liblua.dylib"
