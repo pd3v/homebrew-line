@@ -1,5 +1,5 @@
 class Line < Formula
-  desc "Tiny command-line midi sequencer and language for live coding music. ableton link compatible"
+  desc "Tiny command-line midi sequencer and language for live coding music. ableton link compatible."
   homepage "https://github.com/pd3v/line"
   url "https://github.com/pd3v/line.git",
   tag: "v0.6.2"
@@ -41,7 +41,7 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.so"
     end
     bin.install "build/line"
-    prefix.install "lineparser.lua"
+    keg.install "lineparser.lua"
   
     ohai("Make some noise!")
   end
