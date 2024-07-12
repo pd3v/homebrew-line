@@ -26,8 +26,8 @@ class Line < Formula
     end 
     system "make", "-C", "build/"
 
+    bin.install "build/externals/parser/lineparser.lua"
     on_macos do
-      bin.install "build/lineparser.lua"
       lib.install "build/externals/lpeg/liblpeg.dylib"
       lib.install "build/externals/lua/liblua.dylib"
       lib.install "build/externals/rtmidi/librtmidi.7.0.0.dylib"
@@ -35,7 +35,6 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.dylib"
     end
     on_linux do
-      bin.install "build/lineparser.lua"
       lib.install "build/externals/lpeg/liblpeg.so"
       lib.install "build/externals/lua/liblua.so"
       lib.install "build/externals/rtmidi/librtmidi.so.7.0.0"
