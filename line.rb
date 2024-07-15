@@ -26,8 +26,6 @@ class Line < Formula
     end 
     system "make", "-C", "build/"
 
-    system "touch", "ah.txt"
-
     # lib.install "build/externals/parser/lineparser.lua"
     on_macos do
       lib.install "build/externals/lpeg/liblpeg.dylib"
@@ -44,6 +42,7 @@ class Line < Formula
       lib.install "build/externals/rtmidi/librtmidi.so"
     end
     bin.install "build/line"
+    prefix.install Dir["*.lua"]
     
     ohai("Make some noise!")
   end
